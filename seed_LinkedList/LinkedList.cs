@@ -51,7 +51,7 @@ namespace seed_LinkedList
 
         public void Contains()
         {
-
+            //search code
         }
 
         public void Remove()
