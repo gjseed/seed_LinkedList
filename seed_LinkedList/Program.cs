@@ -31,22 +31,27 @@ namespace seed_LinkedList
             if(Choice.Key == ConsoleKey.S)
             {
                 whoKnows.getFirst();
-            }else if(Choice.Key == ConsoleKey.A)
+            }
+            else if(Choice.Key == ConsoleKey.A)
             {
                 string newItem = Console.ReadLine();
                 if(! string.IsNullOrEmpty(newItem))
                     whoKnows.addToEnd(newItem);
-            }else if(Choice.Key == ConsoleKey.R)
+            }
+            else if(Choice.Key == ConsoleKey.R)
             {
                 whoKnows.Remove();
-            }else if(Choice.Key == ConsoleKey.I)
+            }
+            else if(Choice.Key == ConsoleKey.I)
             {
-
-                whoKnows.Contains();
-            }else if(Choice.Key == ConsoleKey.P)
+                Console.WriteLine("Type in what you want to search for: ";
+                whoKnows.Contains(Console.ReadLine());
+            }
+            else if(Choice.Key == ConsoleKey.P)
             {
                 whoKnows.Print();
-            }else if(Choice.Key == ConsoleKey.E)
+            }
+            else if(Choice.Key == ConsoleKey.E)
             {
                 Environment.Exit(0);
             }

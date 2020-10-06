@@ -49,19 +49,42 @@ namespace seed_LinkedList
 
         }
 
-        public void Contains()
-        {
-            //search code
-        }
-
-        public void Remove()
+        public Node Contains(string Data, string data)
         {
             Node current = head;
-            if(head != null)
+            int cmpVal = Data.CompareTo(data);
+            //string notThere = "That does not exist.";
+            if (cmpVal == 0)
+            {
+                return current;
+            }
+            else
+            {
+                return null;
+                //return notThere;
+            }
+            //while (current != null)
+            //{
+            //    if (cmpVal == 0)
+            //    {
+            //        return current;
+            //    }
+            //}
+        }
+
+        public void Remove(string data)
+        {
+            Node current = head;
+            if(current != null)
             {
                 current = null;
+                current.next = current.next.next;
             }
-            current = current.next;
+            else
+            {
+
+            }
+            //current = current.next;
         }
 
         public void getFirst()
